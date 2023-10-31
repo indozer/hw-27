@@ -1,0 +1,72 @@
+@keyframes scale-up-hor-left {
+    0% {
+              transform: scaleX(0.4);
+              transform-origin: 0% 0%;
+    }
+    100% {
+              transform: scaleX(1);
+              transform-origin: 0% 0%;
+    }
+  }
+  
+
+.aside-menu {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0; 
+    top: 0; 
+    height: 100%;
+    width: 30px;
+    background-color: rgb(65, 65, 65);
+}
+
+.aside-text {
+    writing-mode: vertical-rl;
+    margin-top: 550px;
+    margin-left: 1px;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.aside-menu:hover {
+    position: fixed;
+    left: 0; 
+    top: 0; 
+    height: 100%;
+    width: 350px;
+    background-color: rgb(65, 65, 65);
+    animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.aside-menu:hover > .aside-text {
+    color: rgba(240, 248, 255, 0);
+}
+
+.aside-list {
+    display: none; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 550px;
+    margin-left: 50px;
+}
+
+.aside-menu:hover .aside-list {
+    display: block; 
+}
+
+
+.aside-item {
+    color: aliceblue;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.aside-item:hover {
+    color: rgb(110, 187, 255);
+    font-size: 30px;
+    cursor: pointer;
+    transition: color .3s ease-in-out .1s;
+}
